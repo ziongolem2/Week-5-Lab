@@ -1,0 +1,227 @@
+Saul
+Resendiz		
+
+			WEEL 5 LAB
+
+	QUESTION 1:
+
+def main() :
+    kilometers = float(input('Enter distance in kilometers'))
+    print_miles(kilometers)
+
+def print_miles(kilo_input) :
+    miles = (kilo_input * 0.6214)
+    print(f'Miles: {miles:.2f}') 
+main()
+
+
+	QUESTION 2:
+
+sales_tax_rate = 0.05
+county_tax_rate = 0.025
+def main() :
+    purchase_original_amount = float(input('Enter the amount of a purchase:'))
+    print_purchase_info(purchase_original_amount)
+
+def print_purchase_info(purhcase_input) :
+    purchase_price = (purhcase_input * 1)
+    sales_tax = (sales_tax_rate * purhcase_input)
+    county_tax = (county_tax_rate * purhcase_input)
+    total_tax = (sales_tax + county_tax)
+    total_amount = (purhcase_input + total_tax)
+    print(f'Purchase amount: {purchase_price}\nSales Tax: {sales_tax} \nCounty tax: {county_tax} \nTotal tax: {total_tax}\nTotal amount: {total_amount}')
+    
+main()
+
+
+	QUESTION 3:
+
+def main():
+    # Ask the user to input the replacement cost
+    replacement_cost = float(input('Enter the replacement cost of the building: '))
+    
+    # Call the function to print the minimum insurance amount
+    print_insurance(replacement_cost)
+
+def print_insurance(user_input):
+    # Calculate the minimum insurance (80% of replacement cost)
+    min_insurance = user_input * 0.8
+    
+    # Print the result formatted to two decimal places
+    print(f'Minimum amount of insurance: ${min_insurance:.2f}')
+
+# Run the program
+main()
+
+
+	QUESTION 4:
+
+def main():
+    # Get user input for loan, insurance, gas, oil, tires, and maintenance
+    loan_payment = float(input("Enter the monthly loan payment: "))
+    insurance = float(input("Enter the monthly insurance cost: "))
+    gas = float(input("Enter the monthly gas cost: "))
+    oil = float(input("Enter the monthly oil cost: "))
+    tires = float(input("Enter the monthly tire cost: "))
+    maintenance = float(input("Enter the monthly maintenance cost: "))
+    
+    total_monthly_cost = loan_payment + insurance + gas + oil + tires + maintenance
+    annual_cost = (total_monthly_cost * 12)
+    
+    print_costs_data(total_monthly_cost, annual_cost)
+
+def print_costs_data(monthly, annually):
+    print(f"Total monthly cost: ${monthly:.2f}")
+    print(f"Total annual cost: ${annually:.2f}")
+
+# Run the program
+main()
+
+
+	QUESTION 5: 
+
+county_tax = 0.6
+def main():
+    property_value = float(input('Enter the value of the property: '))
+    assessment_value = (county_tax * property_value)
+    property_tax = calculate_property_tax(assessment_value)
+
+    print(f'Assessment Value is: ${assessment_value:.2f}')
+    print(f'Property Tax is: ${property_tax:.2f}')
+    
+def calculate_property_tax(assessment_value):
+    
+    return (assessment_value / 100) * 0.72
+
+
+# Run the program
+main()
+
+
+	QUESTION 6:
+
+
+a_cost = 20
+b_cost = 15
+c_cost = 10
+
+def main():
+    a_tickets = int(input('How many class A tickets were sold? '))
+    b_tickets = int(input('How many class B tickets were sold? '))
+    c_tickets = int(input('How many class C tickets were sold?: '))
+
+    generated_income = calculate_income(a_tickets, b_tickets, c_tickets)
+    
+    print(f'Total income generated from ticket sales: ${generated_income:.2f}')
+
+def calculate_income(a_tickets, b_tickets, c_tickets):
+    generated_income = 0
+    income_a = a_tickets * a_cost
+    income_b = b_tickets * b_cost
+    income_c = c_tickets * c_cost
+    total_tickets_income = (income_a + income_b + income_c)
+    generated_income += total_tickets_income
+    return generated_income
+
+main()
+
+	QUESTION 7:
+
+def main():
+    # user inputs
+    square_feet_painted = int(input('Enter the square feet of wall to be painted: '))
+    price_per_gallon = float(input('Enter price of paint per gallon: '))
+
+    labor_cost = 0.0
+    paint_cost = 0.0
+    required_gallons = 0
+    hours_required = 0 
+
+    for x in range(0, square_feet_painted, 112):
+        required_gallons += 1
+        hours_required += 8
+        labor_cost += 35.00 * 8 
+        paint_cost += price_per_gallon
+        
+    #Calculating the total paint job cost 
+    total_paint_job_cost = labor_cost + paint_cost
+    #Dsiplay data to console function
+    display_data(required_gallons, hours_required, paint_cost, labor_cost, total_paint_job_cost)
+
+
+def display_data(required_gallons, hours_required, paint_cost, labor_cost, total_paint_job_cost):
+    print(f'Number of gallons of paint required: {required_gallons}')
+    print(f'Hours of labor required: {hours_required}')
+    print(f'Cost of paint: ${paint_cost:.2f}')
+    print(f'Cost of labor charges: ${labor_cost:.2f}')
+    print(f'Total cost of paint job: ${total_paint_job_cost:.2f}')
+
+main()
+
+
+	QUESTION 8:
+
+def main():
+    # tax rates initializing
+    state_sales_tax_rate = 0.05  
+    county_sales_tax_rate = 0.025  
+
+    total_month_sales = float(input('Enter the total sales for the month:'))
+
+    # state/county/total tax calculations
+    state_tax_amount = total_month_sales * state_sales_tax_rate
+    county_tax_amount = total_month_sales * county_sales_tax_rate
+    total_sales_tax = state_tax_amount + county_tax_amount
+
+    # Display the data to console function
+    display_data(state_tax_amount, county_tax_amount, total_sales_tax)
+
+
+def display_data(state_tax_amount, county_tax_amount, total_sales_tax):
+    print(f'County sales tax: ${county_tax_amount:.2f}')
+    print(f'State tax amount: ${state_tax_amount:.2f}')
+    print(f'Total sales tax: ${total_sales_tax:.2f}')
+
+main() 
+
+
+	QUESTION 9: 
+
+inches_per_foot = 12
+
+def main():
+    feet = int(input('Enter number of feet: '))
+    
+    print(feet, 'equals', feet_to_inches_calc(feet), 'inches.')
+
+def feet_to_inches_calc(feet):
+    return feet * inches_per_foot
+    
+main()
+
+
+	QUESTION 10:
+
+import random
+
+def main():
+    num1 = random.randint(0, 500)
+    num2 = random.randint(0, 500)
+
+    print(f"What is {num1}")
+    print(f" + \t{num2}")
+    print('--------------')
+    
+    # user answer input
+    user_answer = int(input("\nEnter your answer: "))
+    
+    correct_answer = num1 + num2  
+    
+    if user_answer == (num1 + num2):
+        print('Congrats, you are correct!')
+    else:
+        print(f'Sorry, the correct answer is: {correct_answer}')
+        
+main()
+
+
