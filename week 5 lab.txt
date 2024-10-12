@@ -37,20 +37,16 @@ main()
 	QUESTION 3:
 
 def main():
-    # Ask the user to input the replacement cost
+    # user input
     replacement_cost = float(input('Enter the replacement cost of the building: '))
     
-    # Call the function to print the minimum insurance amount
     print_insurance(replacement_cost)
 
 def print_insurance(user_input):
-    # Calculate the minimum insurance (80% of replacement cost)
+    # calculate the min insurance 
     min_insurance = user_input * 0.8
-    
-    # Print the result formatted to two decimal places
     print(f'Minimum amount of insurance: ${min_insurance:.2f}')
 
-# Run the program
 main()
 
 
@@ -74,7 +70,6 @@ def print_costs_data(monthly, annually):
     print(f"Total monthly cost: ${monthly:.2f}")
     print(f"Total annual cost: ${annually:.2f}")
 
-# Run the program
 main()
 
 
@@ -93,13 +88,10 @@ def calculate_property_tax(assessment_value):
     
     return (assessment_value / 100) * 0.72
 
-
-# Run the program
 main()
 
 
 	QUESTION 6:
-
 
 a_cost = 20
 b_cost = 15
@@ -145,7 +137,7 @@ def main():
         
     #Calculating the total paint job cost 
     total_paint_job_cost = labor_cost + paint_cost
-    #Dsiplay data to console function
+    #Dsiplay data to console 
     display_data(required_gallons, hours_required, paint_cost, labor_cost, total_paint_job_cost)
 
 
@@ -157,7 +149,6 @@ def display_data(required_gallons, hours_required, paint_cost, labor_cost, total
     print(f'Total cost of paint job: ${total_paint_job_cost:.2f}')
 
 main()
-
 
 	QUESTION 8:
 
@@ -183,7 +174,6 @@ def display_data(state_tax_amount, county_tax_amount, total_sales_tax):
     print(f'Total sales tax: ${total_sales_tax:.2f}')
 
 main() 
-
 
 	QUESTION 9: 
 
